@@ -2,8 +2,8 @@
 using namespace std;
 int main()
 {
-    int n;
-    cin >> n;
+    int n = 3;
+    // cin >> n;
 
     int sum = 0;
     for (int i = 0; i < n; i++)
@@ -12,4 +12,6 @@ int main()
         sum = sum / 10;
     }
     cout << sum;
+
+    return 0;
 }
