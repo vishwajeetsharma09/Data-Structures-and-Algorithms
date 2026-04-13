@@ -3,7 +3,6 @@ using namespace std;
 int main()
 {
     int n = 6;
-    int maxsum = INT_MIN;
 
     int arr[6] = {1, 2, 3, 4, 5};
 
@@ -33,5 +32,22 @@ int main()
     //     }
     // }
     // cout << maxSum;
+
+    // optimal solution kadane algorithms
+
+    int currSum = 0;
+    int maxsum = INT_MIN;
+    for (int i = 0; i < n; i++)
+    {
+        currSum += arr[i];
+        maxsum = max(currSum, maxsum);
+        if (currSum < 0)
+        {
+            currSum = 0;
+        }
+    }
+
+    cout << maxsum;
+
     return 0;
 }
